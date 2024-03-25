@@ -43,3 +43,5 @@ FROM `departments`;
 
 
 8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+SELECT SUM(CASE WHEN `phone` IS NULL THEN 1 ELSE 0 END) AS nulls_phone
+FROM `teachers`;
